@@ -1,12 +1,15 @@
 PODS:
   - DynamicColor (3.1.0)
+  - ImageFilters (0.3.0)
 
 DEPENDENCIES:
   - DynamicColor (~> 3.1)
+  - ImageFilters (~> 0.3)
 
 SPEC CHECKSUMS:
   DynamicColor: 4dec283a881f7f9d9f3bc88fb5f306724242575f
+  ImageFilters: 36363138a10185bad6b849b874cc4bb94a074894
 
-PODFILE CHECKSUM: c7d5642dd1e41f99a49a6812b316303234cc83ce
+PODFILE CHECKSUM: 09066b878c2afe86dfc708d558accb16d5bee029
 
 COCOAPODS: 1.2.0.beta.1
