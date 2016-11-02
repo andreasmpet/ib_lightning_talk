@@ -11,18 +11,23 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet private weak var dudeView: IBDudeView!
+    private var dudeAnimator: IBDudeAnimator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dudeModel = IBDudeDefaultModel(leftEyeState: .squint(.left, 0),
-                                           rightEyeState: .squint(.right, 0),
-                                           handStates: [
-                                                .resisting(.left),
-                                                .resisting(.right),
-                                           ],
-                                           mouthState: .frown(0))
+        self.dudeAnimator = IBDudeAnimator(view: self.dudeView,
+                                           model: IBDudeAnimatedDudeModel(animationBlock: { (phase) -> IBDudeModel in
+                                            return IBDudeDefaultModel(leftEyeState: .squint(.left, phase),
+                                                               rightEyeState: .squint(.right, phase),
+                                                               handStates: [
+                                                                .resisting(.left),
+                                                                .resisting(.right),
+                                                                ],
+                                                               mouthState: .frown(phase))
+                                           }),
+                                           idleFrameUpdateInterval: 0.1)
         
-        self.dudeView.viewModel = dudeModel
+        self.dudeAnimator.start()
     }
 }
 

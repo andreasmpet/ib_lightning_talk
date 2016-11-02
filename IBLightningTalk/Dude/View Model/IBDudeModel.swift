@@ -50,7 +50,8 @@ class IBDudeDefaultModel: IBDudeModel {
     }
     
     enum MouthState {
-        static let frownVibrateFactor: Float = 0.2
+        static let frownVibrateFactor: Float = 0.1
+        static let speed: Float = 20
         
         case smile(SmileWidth)
         case frown(Phase)
@@ -60,7 +61,7 @@ class IBDudeDefaultModel: IBDudeModel {
             case .smile(_):
                 return Float.pi
             case .frown(let phase):
-                return sin(phase) * type(of:self).frownVibrateFactor
+                return sin(phase * type(of:self).speed) * type(of:self).frownVibrateFactor
             }
         }
         
@@ -81,7 +82,8 @@ class IBDudeDefaultModel: IBDudeModel {
     
     enum EyeState {
         static let eyeOffsetFactor: Float = 0.1
-        static let eyeScaleFactor: Float = 0.2
+        static let speed: Float = 3
+        static let eyeScaleFactor: Float = 0.1
         
         case squint(Eye, Phase)
         case open(Eye, Phase)
@@ -99,7 +101,7 @@ class IBDudeDefaultModel: IBDudeModel {
             switch(self) {
             case .squint(let eye, let phase):
                 let phaseOffset = type(of:self).eyeOffsetFactor * (eye == .left ? 1 : -1) // Don't want the eyes to scale at the same time, so let's offset them a bit
-                return 1 + (sin(phase + phaseOffset) * type(of:self).eyeScaleFactor)
+                return 1 + (sin((phase * type(of:self).speed) + phaseOffset) * type(of:self).eyeScaleFactor)
             default:
                 return 1
             }
