@@ -83,6 +83,6 @@ class IBCompressionAnimation: NSObject, IBDudeAnimation {
     }
     
     private var isBeingCompressed: Bool {
-        return self.horizontalCompressionFactor >= 1 || self.verticalCompressionFactor >= 1
+        return self.horizontalCompressionFactor > 1 || self.verticalCompressionFactor > 1
     }
 }

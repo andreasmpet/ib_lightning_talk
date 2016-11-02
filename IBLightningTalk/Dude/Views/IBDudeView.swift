@@ -27,6 +27,15 @@ class IBDudeView: UIView {
         }
     }
     
+    var horizontalCompressionResistance: Float {
+        get {
+            return self.bodyImageView.contentCompressionResistancePriority(for: .horizontal)
+        }
+        set(value) {
+            self.bodyImageView.setContentCompressionResistancePriority(value, for: .horizontal)
+        }
+    }
+    
     // MARK: Private Properties
     @IBOutlet private weak var leftEyeView: UIImageView!
     @IBOutlet private weak var rightEyeView: UIImageView!
