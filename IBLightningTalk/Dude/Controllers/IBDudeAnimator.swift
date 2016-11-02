@@ -10,7 +10,7 @@ import UIKit
 
 class IBDudeAnimator: NSObject {
     private(set) var view: IBDudeView
-    private(set) var model: IBDudeAnimatedDudeModel
+    var animation: IBDudeAnimation
     private(set) var idleFrameUpdateInterval: TimeInterval
     
     private var startTime: TimeInterval?
@@ -22,9 +22,9 @@ class IBDudeAnimator: NSObject {
     
     private var idleTimer: Timer?
     
-    init(view: IBDudeView, model: IBDudeAnimatedDudeModel, idleFrameUpdateInterval: TimeInterval) {
+    init(view: IBDudeView, animation: IBDudeAnimation, idleFrameUpdateInterval: TimeInterval) {
         self.view = view
-        self.model = model
+        self.animation = animation
         self.idleFrameUpdateInterval = idleFrameUpdateInterval
     }
     
@@ -34,11 +34,11 @@ class IBDudeAnimator: NSObject {
     }
     
     func stop() {
-        startTime = nil
+        self.startTime = nil
         self.idleTimer?.invalidate()
     }
     
-    private func resetIdleTimer() {
+    func resetIdleTimer() {
         self.idleTimer?.invalidate()
         self.idleTimer = Timer(timeInterval: self.idleFrameUpdateInterval, repeats: true, block: { (t) in
             if let startTime = self.startTime {
@@ -49,7 +49,6 @@ class IBDudeAnimator: NSObject {
     }
     
     private func update(withElapsedTime elapsedTime: TimeInterval) {
-        self.model.phase = Float(elapsedTime)
-        self.view.viewModel = model
+        self.view.viewModel = animation.model(forPhase: Float(elapsedTime))
     }
 }

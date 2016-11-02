@@ -13,6 +13,8 @@
 		E10B121E1DCA3BD300C12DCA /* IBDudeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B121A1DCA3BD300C12DCA /* IBDudeView.swift */; };
 		E10B121F1DCA3BD300C12DCA /* IBDudeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10B121B1DCA3BD300C12DCA /* IBDudeView.xib */; };
 		E10B12211DCA3BF100C12DCA /* IBDudeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B12201DCA3BF100C12DCA /* IBDudeAnimator.swift */; };
+		E10B12251DCA4AF100C12DCA /* IBDudeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B12241DCA4AF100C12DCA /* IBDudeAnimation.swift */; };
+		E10B12271DCA4B5800C12DCA /* IBCompressionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B12261DCA4B5800C12DCA /* IBCompressionAnimation.swift */; };
 		E1F098151DC90E0500C05F5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F098141DC90E0500C05F5C /* AppDelegate.swift */; };
 		E1F098171DC90E0500C05F5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F098161DC90E0500C05F5C /* ViewController.swift */; };
 		E1F0981A1DC90E0500C05F5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F098181DC90E0500C05F5C /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		E10B121A1DCA3BD300C12DCA /* IBDudeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDudeView.swift; sourceTree = "<group>"; };
 		E10B121B1DCA3BD300C12DCA /* IBDudeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBDudeView.xib; sourceTree = "<group>"; };
 		E10B12201DCA3BF100C12DCA /* IBDudeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDudeAnimator.swift; sourceTree = "<group>"; };
+		E10B12241DCA4AF100C12DCA /* IBDudeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDudeAnimation.swift; sourceTree = "<group>"; };
+		E10B12261DCA4B5800C12DCA /* IBCompressionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBCompressionAnimation.swift; sourceTree = "<group>"; };
 		E1F098111DC90E0500C05F5C /* IBLightningTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBLightningTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F098141DC90E0500C05F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1F098161DC90E0500C05F5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			children = (
 				E10B12171DCA3BD300C12DCA /* IBDudeAnimatedDudeModel.swift */,
 				E10B12181DCA3BD300C12DCA /* IBDudeModel.swift */,
+				E10B12241DCA4AF100C12DCA /* IBDudeAnimation.swift */,
+				E10B12261DCA4B5800C12DCA /* IBCompressionAnimation.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -293,10 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10B12271DCA4B5800C12DCA /* IBCompressionAnimation.swift in Sources */,
 				E1F098171DC90E0500C05F5C /* ViewController.swift in Sources */,
 				E1F098541DC916F500C05F5C /* IBColors.swift in Sources */,
 				E1F098151DC90E0500C05F5C /* AppDelegate.swift in Sources */,
 				E10B121E1DCA3BD300C12DCA /* IBDudeView.swift in Sources */,
+				E10B12251DCA4AF100C12DCA /* IBDudeAnimation.swift in Sources */,
 				E10B12211DCA3BF100C12DCA /* IBDudeAnimator.swift in Sources */,
 				E10B121D1DCA3BD300C12DCA /* IBDudeModel.swift in Sources */,
 				E10B121C1DCA3BD300C12DCA /* IBDudeAnimatedDudeModel.swift in Sources */,

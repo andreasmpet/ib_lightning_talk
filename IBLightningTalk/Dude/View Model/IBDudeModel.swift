@@ -81,9 +81,9 @@ class IBDudeDefaultModel: IBDudeModel {
     }
     
     enum EyeState {
-        static let eyeOffsetFactor: Float = 0.1
-        static let speed: Float = 3
+        static let eyeOffsetFactor: Float = 0.2
         static let eyeScaleFactor: Float = 0.1
+        static let speed: Float = 3
         
         case squint(Eye, Phase)
         case open(Eye, Phase)

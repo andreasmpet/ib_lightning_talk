@@ -29,16 +29,16 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="body" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-Rt-2FT">
                     <rect key="frame" x="192" y="104" width="166" height="166"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hands_push_up" translatesAutoresizingMaskIntoConstraints="NO" id="5QE-Ch-sQG" userLabel="dude_hands_push_up">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hand_resisting_up" translatesAutoresizingMaskIntoConstraints="NO" id="5QE-Ch-sQG" userLabel="dude_hands_push_up">
                     <rect key="frame" x="198" y="0.0" width="154" height="66"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hands_push_right" translatesAutoresizingMaskIntoConstraints="NO" id="uuF-QE-ur2" userLabel="dude_hands_push_up">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hand_resisting_right" translatesAutoresizingMaskIntoConstraints="NO" id="uuF-QE-ur2" userLabel="dude_hands_push_up">
                     <rect key="frame" x="484" y="110" width="66" height="154"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hands_push_left" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-es-TQN" userLabel="dude_hands_push_up">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hand_resisting_left" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-es-TQN" userLabel="dude_hands_push_up">
                     <rect key="frame" x="0.0" y="110" width="66" height="154"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hands_push_down" translatesAutoresizingMaskIntoConstraints="NO" id="sTZ-H2-vZv" userLabel="dude_hands_push_up">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hand_resisting_down" translatesAutoresizingMaskIntoConstraints="NO" id="sTZ-H2-vZv" userLabel="dude_hands_push_up">
                     <rect key="frame" x="198" y="307" width="154" height="66"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye_right_squint" translatesAutoresizingMaskIntoConstraints="NO" id="feJ-xs-0Be">
@@ -88,10 +88,10 @@
         <image name="body" width="166" height="166"/>
         <image name="eye_left_squint" width="50" height="50"/>
         <image name="eye_right_squint" width="50" height="50"/>
-        <image name="hands_push_down" width="154" height="66"/>
-        <image name="hands_push_left" width="66" height="154"/>
-        <image name="hands_push_right" width="66" height="154"/>
-        <image name="hands_push_up" width="154" height="66"/>
+        <image name="hand_resisting_down" width="154" height="66"/>
+        <image name="hand_resisting_left" width="66" height="154"/>
+        <image name="hand_resisting_right" width="66" height="154"/>
+        <image name="hand_resisting_up" width="154" height="66"/>
         <image name="hat" width="158" height="118"/>
         <image name="mouth_frown" width="80" height="52"/>
     </resources>

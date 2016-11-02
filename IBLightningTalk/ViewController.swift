@@ -16,15 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dudeAnimator = IBDudeAnimator(view: self.dudeView,
-                                           model: IBDudeAnimatedDudeModel(animationBlock: { (phase) -> IBDudeModel in
-                                            return IBDudeDefaultModel(leftEyeState: .squint(.left, phase),
-                                                               rightEyeState: .squint(.right, phase),
-                                                               handStates: [
-                                                                .resisting(.left),
-                                                                .resisting(.right),
-                                                                ],
-                                                               mouthState: .frown(phase))
-                                           }),
+                                           animation: IBCompressionAnimation(referenceView: self.dudeView),
                                            idleFrameUpdateInterval: 0.1)
         
         self.dudeAnimator.start()

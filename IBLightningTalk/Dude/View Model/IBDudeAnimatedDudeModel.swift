@@ -64,4 +64,5 @@ class IBDudeAnimatedDudeModel: IBDudeModel {
     private func update(fromPhase phase: Float) {
         self.currentFrame = self.animationBlock(phase)
     }
+    
 }
