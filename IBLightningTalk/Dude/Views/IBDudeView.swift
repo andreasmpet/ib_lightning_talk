@@ -55,6 +55,8 @@ class IBDudeView: UIView {
     }
     
     private func commonInit() {
+        self.backgroundColor = UIColor.clear
+        
         let bundle = Bundle(for: type(of:self))
         _ = NibInjector.inject(fristViewInNibNamed: "IBDudeView", inBundle: bundle, intoContainer: self, withOwner: self)
         
@@ -82,6 +84,9 @@ class IBDudeView: UIView {
         self.rightHandView.image = model.handIconRight
         self.upHandView.image = model.handIconUp
         self.downHandView.image = model.handIconDown
+        
+        self.leftEyeView.image = model.leftEyeIcon
+        self.rightEyeView.image = model.rightEyeIcon
     }
     
     private func update(fromColorizeAmount amount: Float) {

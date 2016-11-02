@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		267FC6F53938B498D680E845 /* Pods_IBAbstract_IBLightningTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92097A350B0F3E1DFD51BE4 /* Pods_IBAbstract_IBLightningTalk.framework */; };
-		E10B121C1DCA3BD300C12DCA /* IBDudeAnimatedDudeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B12171DCA3BD300C12DCA /* IBDudeAnimatedDudeModel.swift */; };
 		E10B121D1DCA3BD300C12DCA /* IBDudeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B12181DCA3BD300C12DCA /* IBDudeModel.swift */; };
 		E10B121E1DCA3BD300C12DCA /* IBDudeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B121A1DCA3BD300C12DCA /* IBDudeView.swift */; };
 		E10B121F1DCA3BD300C12DCA /* IBDudeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10B121B1DCA3BD300C12DCA /* IBDudeView.xib */; };
@@ -42,7 +41,6 @@
 		07E88ACEAEF3C2F14D48123A /* Pods-IBAbstract-IBLightningTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBAbstract-IBLightningTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBAbstract-IBLightningTalk/Pods-IBAbstract-IBLightningTalk.release.xcconfig"; sourceTree = "<group>"; };
 		3A4DF0FEDA08CE868F55906C /* Pods-IBAbstract-IBLightningTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBAbstract-IBLightningTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBAbstract-IBLightningTalk/Pods-IBAbstract-IBLightningTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		9AD65FF64BA06584245B8E4E /* Pods_IBAbstract_IBReusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBAbstract_IBReusable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E10B12171DCA3BD300C12DCA /* IBDudeAnimatedDudeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDudeAnimatedDudeModel.swift; sourceTree = "<group>"; };
 		E10B12181DCA3BD300C12DCA /* IBDudeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDudeModel.swift; sourceTree = "<group>"; };
 		E10B121A1DCA3BD300C12DCA /* IBDudeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDudeView.swift; sourceTree = "<group>"; };
 		E10B121B1DCA3BD300C12DCA /* IBDudeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBDudeView.xib; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 		E10B12161DCA3BD300C12DCA /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				E10B12171DCA3BD300C12DCA /* IBDudeAnimatedDudeModel.swift */,
 				E10B12181DCA3BD300C12DCA /* IBDudeModel.swift */,
 				E10B12241DCA4AF100C12DCA /* IBDudeAnimation.swift */,
 				E10B12261DCA4B5800C12DCA /* IBCompressionAnimation.swift */,
@@ -307,7 +304,6 @@
 				E10B12251DCA4AF100C12DCA /* IBDudeAnimation.swift in Sources */,
 				E10B12211DCA3BF100C12DCA /* IBDudeAnimator.swift in Sources */,
 				E10B121D1DCA3BD300C12DCA /* IBDudeModel.swift in Sources */,
-				E10B121C1DCA3BD300C12DCA /* IBDudeAnimatedDudeModel.swift in Sources */,
 				E1F0984B1DC9132600C05F5C /* ViewInjector.swift in Sources */,
 				E1F0984A1DC9132600C05F5C /* NibInjector.swift in Sources */,
 			);

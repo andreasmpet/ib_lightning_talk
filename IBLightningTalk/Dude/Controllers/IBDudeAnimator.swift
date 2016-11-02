@@ -31,6 +31,7 @@ class IBDudeAnimator: NSObject {
     func start() {
         self.startTime = Date().timeIntervalSinceReferenceDate
         self.resetIdleTimer()
+        self.update(withElapsedTime: self.elapsedTime)
     }
     
     func stop() {

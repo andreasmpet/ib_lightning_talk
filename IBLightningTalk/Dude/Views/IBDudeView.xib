@@ -54,7 +54,7 @@
                     <rect key="frame" x="238" y="191" width="80" height="52"/>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="feJ-xs-0Be" firstAttribute="centerX" secondItem="JfW-Rt-2FT" secondAttribute="centerX" constant="21.5" id="4uE-Le-4e1"/>
                 <constraint firstItem="FeR-4N-SZc" firstAttribute="centerY" secondItem="JfW-Rt-2FT" secondAttribute="centerY" constant="30" id="5wF-bT-bgK"/>
@@ -74,6 +74,7 @@
                 <constraint firstItem="sTZ-H2-vZv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JfW-Rt-2FT" secondAttribute="bottom" constant="-60" id="g3M-Tg-vSd"/>
                 <constraint firstItem="sTZ-H2-vZv" firstAttribute="centerX" secondItem="f3c-Rw-xih" secondAttribute="centerX" id="i5k-jb-DR4"/>
                 <constraint firstItem="JfW-Rt-2FT" firstAttribute="top" secondItem="XWf-5K-HOd" secondAttribute="bottom" constant="-63" id="sow-r9-81g"/>
+                <constraint firstItem="XWf-5K-HOd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="f3c-Rw-xih" secondAttribute="top" id="tqC-5P-aOf"/>
                 <constraint firstItem="JfW-Rt-2FT" firstAttribute="centerY" secondItem="f3c-Rw-xih" secondAttribute="centerY" id="uIs-qm-J9z"/>
                 <constraint firstItem="ugx-es-TQN" firstAttribute="leading" secondItem="f3c-Rw-xih" secondAttribute="leading" id="uLL-GV-2Fx"/>
                 <constraint firstItem="ugx-es-TQN" firstAttribute="centerY" secondItem="f3c-Rw-xih" secondAttribute="centerY" id="xID-9U-O50"/>
