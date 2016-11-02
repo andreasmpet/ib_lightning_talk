@@ -11,7 +11,7 @@ import ImageFilters
 import DynamicColor
 
 @IBDesignable
-class IBDude: UIView {
+class IBDudeView: UIView {
 
     // MARK: Public Properties
     
@@ -28,8 +28,15 @@ class IBDude: UIView {
     }
     
     // MARK: Private Properties
+    @IBOutlet private weak var leftEyeView: UIImageView!
+    @IBOutlet private weak var rightEyeView: UIImageView!
     @IBOutlet private weak var bodyImageView: UIImageView!
     @IBOutlet private weak var mouthImageView: UIImageView!
+    
+    @IBOutlet private weak var upHandView: UIImageView!
+    @IBOutlet private weak var downHandView: UIImageView!
+    @IBOutlet private weak var leftHandView: UIImageView!
+    @IBOutlet private weak var rightHandView: UIImageView!
     
     // MARK: Init
     
@@ -49,17 +56,12 @@ class IBDude: UIView {
     
     private func commonInit() {
         let bundle = Bundle(for: type(of:self))
-        _ = NibInjector.inject(fristViewInNibNamed: "IBDude", inBundle: bundle, intoContainer: self, withOwner: self)
+        _ = NibInjector.inject(fristViewInNibNamed: "IBDudeView", inBundle: bundle, intoContainer: self, withOwner: self)
         
         if let model = self.viewModel {
             self.update(fromViewModel: model, animated: false)
         }
-        
-        
-        
-//        self.update(fromColorizeAmount: self.colorizeAmount)
     }
-    
     
     private func update(fromViewModel model: IBDudeModel, animated: Bool) {
         if (animated) {
@@ -72,7 +74,14 @@ class IBDude: UIView {
     }
     
     private func update(fromViewModel model: IBDudeModel) {
+        self.leftEyeView.transform = model.leftEyeTransform
+        self.rightEyeView.transform = model.rightEyeTransform
+        self.mouthImageView.transform = model.mouthTransform
         
+        self.leftHandView.image = model.handIconLeft
+        self.rightHandView.image = model.handIconRight
+        self.upHandView.image = model.handIconUp
+        self.downHandView.image = model.handIconDown
     }
     
     private func update(fromColorizeAmount amount: Float) {

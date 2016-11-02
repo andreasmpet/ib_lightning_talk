@@ -8,7 +8,17 @@
 
 import UIKit
 
-class IBDudeModel {
+protocol IBDudeModel {
+    var mouthTransform: CGAffineTransform { get }
+    var leftEyeTransform: CGAffineTransform { get }
+    var rightEyeTransform: CGAffineTransform { get }
+    var handIconUp: UIImage? { get }
+    var handIconDown: UIImage? { get }
+    var handIconLeft: UIImage? { get }
+    var handIconRight: UIImage? { get }
+}
+
+class IBDudeDefaultModel: IBDudeModel {
     
     typealias Phase = Float
     typealias SmileWidth = Float
@@ -25,13 +35,13 @@ class IBDudeModel {
         case hugging(HandPosition)
         
         var icon: UIImage? {
-            var name: String = ""
+            var name: String = "hand_"
             switch self {
             case .resisting(let handPosition):
-                name = "resisting_\(handPosition)"
+                name.append("resisting_\(handPosition)")
                 break
             case .hugging(let handPosition):
-                name = "hugging_\(handPosition)"
+                name.append("hugging_\(handPosition)")
                 break
             }
             
@@ -48,9 +58,9 @@ class IBDudeModel {
         var rotationAngle: Float {
             switch(self) {
             case .smile(_):
-                return 0
+                return Float.pi
             case .frown(let phase):
-                return Float.pi + sin(phase) * type(of:self).frownVibrateFactor
+                return sin(phase) * type(of:self).frownVibrateFactor
             }
         }
         
@@ -96,19 +106,66 @@ class IBDudeModel {
         }
     }
     
-    private(set) var eyeStates: [EyeState]
+    private(set) var leftEyeState: EyeState
+    private(set) var rightEyeState: EyeState
     private(set) var handStates: [HandState]
     private(set) var mouthState: MouthState
     
-    var mouthTransform: CGAffineTransform {
-        let scale = self.mouthState.scale
-        return CGAffineTransform(rotationAngle: CGFloat(self.mouthState.rotationAngle)).concatenating(CGAffineTransform(scaleX:scale.x, y: scale.y))
-    }
-    
-    init(eyeStates: [EyeState], handStates: [HandState], mouthState: MouthState) {
-        self.eyeStates = eyeStates
+    init(leftEyeState: EyeState, rightEyeState: EyeState, handStates: [HandState], mouthState: MouthState) {
+        self.leftEyeState = leftEyeState
+        self.rightEyeState = rightEyeState
         self.handStates = handStates
         self.mouthState = mouthState
     }
     
+    // MARK: IBDudeModel
+    
+    lazy var mouthTransform: CGAffineTransform = {
+        let scale = self.mouthState.scale
+        return CGAffineTransform(rotationAngle: CGFloat(self.mouthState.rotationAngle)).concatenating(CGAffineTransform(scaleX:scale.x, y: scale.y))
+    }()
+    
+    lazy var leftEyeTransform: CGAffineTransform = {
+        return self.transform(forEyeState: self.leftEyeState)
+    }()
+    
+    lazy var rightEyeTransform: CGAffineTransform = {
+        return self.transform(forEyeState: self.rightEyeState)
+    }()
+    
+    lazy var handIconUp: UIImage? = {
+        return self.image(forHandPosition: .up)
+    }()
+    
+    lazy var handIconDown: UIImage? = {
+        return self.image(forHandPosition: .down)
+    }()
+    
+    lazy var handIconLeft: UIImage? = {
+        return self.image(forHandPosition: .left)
+    }()
+    
+    lazy var handIconRight: UIImage? = {
+        return self.image(forHandPosition: .right)
+    }()
+    
+    // MARK: Helpers
+    
+    private func transform(forEyeState eyeState: EyeState) -> CGAffineTransform {
+        return CGAffineTransform(rotationAngle: CGFloat(eyeState.rotationAngle)).concatenating(CGAffineTransform(scaleX: CGFloat(eyeState.scale), y: CGFloat(eyeState.scale)))
+    }
+    
+    private func image(forHandPosition handPosition: HandPosition) -> UIImage? {
+        // Holy cumbersome batman
+        let handState: HandState? = self.handStates.filter({ state in
+            switch(state) {
+            case .resisting(let pos):
+                return pos == handPosition
+            case .hugging(let pos):
+                return pos == handPosition
+            }
+        }).first
+        
+        return handState?.icon
+    }
 }

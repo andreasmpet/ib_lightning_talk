@@ -9,9 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBDude" customModule="IBLightningTalk" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBDudeView" customModule="IBLightningTalk" customModuleProvider="target">
             <connections>
                 <outlet property="bodyImageView" destination="JfW-Rt-2FT" id="9tl-hy-bP3"/>
+                <outlet property="downHandView" destination="sTZ-H2-vZv" id="bwg-aZ-4SB"/>
+                <outlet property="leftEyeView" destination="SM3-q5-vsI" id="eFS-nd-CPT"/>
+                <outlet property="leftHandView" destination="ugx-es-TQN" id="9mZ-j7-gkK"/>
+                <outlet property="mouthImageView" destination="FeR-4N-SZc" id="m7U-Iz-bBW"/>
+                <outlet property="rightEyeView" destination="feJ-xs-0Be" id="iAn-z1-r2L"/>
+                <outlet property="rightHandView" destination="uuF-QE-ur2" id="l2f-lf-lEO"/>
+                <outlet property="upHandView" destination="5QE-Ch-sQG" id="nZR-YX-mwc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,31 +27,31 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="body" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-Rt-2FT">
-                    <rect key="frame" x="192" y="103.5" width="166" height="166"/>
+                    <rect key="frame" x="192" y="104" width="166" height="166"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hands_push_up" translatesAutoresizingMaskIntoConstraints="NO" id="5QE-Ch-sQG" userLabel="dude_hands_push_up">
                     <rect key="frame" x="198" y="0.0" width="154" height="66"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hands_push_right" translatesAutoresizingMaskIntoConstraints="NO" id="uuF-QE-ur2" userLabel="dude_hands_push_up">
-                    <rect key="frame" x="484" y="109.5" width="66" height="154"/>
+                    <rect key="frame" x="484" y="110" width="66" height="154"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hands_push_left" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-es-TQN" userLabel="dude_hands_push_up">
-                    <rect key="frame" x="0.0" y="109.5" width="66" height="154"/>
+                    <rect key="frame" x="0.0" y="110" width="66" height="154"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hands_push_down" translatesAutoresizingMaskIntoConstraints="NO" id="sTZ-H2-vZv" userLabel="dude_hands_push_up">
                     <rect key="frame" x="198" y="307" width="154" height="66"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye_right_squint" translatesAutoresizingMaskIntoConstraints="NO" id="feJ-xs-0Be">
-                    <rect key="frame" x="271.5" y="140.5" width="50" height="50"/>
+                    <rect key="frame" x="272" y="141" width="50" height="50"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye_left_squint" translatesAutoresizingMaskIntoConstraints="NO" id="SM3-q5-vsI">
-                    <rect key="frame" x="218.5" y="148.5" width="50" height="50"/>
+                    <rect key="frame" x="219" y="149" width="50" height="50"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hat" translatesAutoresizingMaskIntoConstraints="NO" id="XWf-5K-HOd">
-                    <rect key="frame" x="195.5" y="48.5" width="158" height="118"/>
+                    <rect key="frame" x="196" y="49" width="158" height="118"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mouth_frown" translatesAutoresizingMaskIntoConstraints="NO" id="FeR-4N-SZc">
-                    <rect key="frame" x="237.5" y="190.5" width="80" height="52"/>
+                    <rect key="frame" x="238" y="191" width="80" height="52"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
