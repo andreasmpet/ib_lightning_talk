@@ -14,8 +14,6 @@ protocol IBDudeModel {
     var rightEyeIcon: UIImage { get }
     var leftEyeTransform: CGAffineTransform { get }
     var rightEyeTransform: CGAffineTransform { get }
-    var handIconUp: UIImage? { get }
-    var handIconDown: UIImage? { get }
     var handIconLeft: UIImage? { get }
     var handIconRight: UIImage? { get }
 }
@@ -26,8 +24,6 @@ class IBDudeDefaultModel: IBDudeModel {
     typealias SmileWidth = Float
 
     enum HandPosition: String {
-        case up = "up"
-        case down = "down"
         case left = "left"
         case right = "right"
     }
@@ -57,6 +53,7 @@ class IBDudeDefaultModel: IBDudeModel {
         
         case smile(SmileWidth, Phase)
         case frown(Phase)
+        case open(Phase)
         
         var rotationAngle: Float {
             switch(self) {
@@ -64,6 +61,8 @@ class IBDudeDefaultModel: IBDudeModel {
                 return Float.pi + sin(phase) * type(of:self).frownVibrateFactor
             case .frown(let phase):
                 return sin(phase * type(of:self).speed) * type(of:self).frownVibrateFactor
+            default:
+                return 0
             }
         }
         
@@ -71,8 +70,19 @@ class IBDudeDefaultModel: IBDudeModel {
             switch(self) {
             case .smile(let smileWidth, _):
                 return CGPoint(x: CGFloat(smileWidth), y: 1)
+            case.open(let phase):
+                return CGPoint(x: CGFloat(1 + 0.1 * sin(phase)), y: 1)
             default:
                 return CGPoint(x: 1, y: 1)
+            }
+        }
+        
+        var mouthIcon: UIImage {
+            switch self {
+            case .open(_):
+                return UIImage(named: "mouth_open")!
+            default:
+                return UIImage(named: "mouth_frown")!
             }
         }
     }
@@ -85,17 +95,21 @@ class IBDudeDefaultModel: IBDudeModel {
     enum EyeState {
         static let eyeOffsetFactor: Float = 0.2
         static let eyeScaleFactor: Float = 0.1
+        static let eyeRotationAngle: Float = (Float.pi / 6)
         static let speed: Float = 3
         
         case squint(Eye, Phase)
         case open(Eye, Phase)
+        case worried(Eye, Phase)
         
         var rotationAngle: Float {
             switch(self) {
             case .open(_):
                 return 0
             case .squint(let eye, _):
-                return (Float.pi / 6) * (eye == .left ? 1 : -1)
+                return type(of:self).eyeRotationAngle * (eye == .left ? 1 : -1)
+            case .worried(let eye, _):
+                return  -type(of:self).eyeRotationAngle * (eye == .left ? 1 : -1)
             }
         }
         
@@ -111,7 +125,7 @@ class IBDudeDefaultModel: IBDudeModel {
         
         var icon: UIImage {
             switch (self) {
-            case .open(_):
+            case .open(_), .worried(_):
                 return UIImage(named: "eye_open")!
             case .squint(let eye, _):
                 return UIImage(named: eye == .left ? "eye_left_squint" : "eye_right_squint")!
@@ -161,14 +175,6 @@ class IBDudeDefaultModel: IBDudeModel {
         return self.rightEyeState.icon
     }()
     
-    lazy var handIconUp: UIImage? = {
-        return self.image(forHandPosition: .up)
-    }()
-    
-    lazy var handIconDown: UIImage? = {
-        return self.image(forHandPosition: .down)
-    }()
-    
     lazy var handIconLeft: UIImage? = {
         return self.image(forHandPosition: .left)
     }()
@@ -200,9 +206,7 @@ class IBDudeDefaultModel: IBDudeModel {
     private func findEyeState(forEyePosition position: Eye) -> EyeState {
         return self.eyeStates.filter({ state in
             switch(state) {
-            case .squint(let pos, _):
-                return pos == position
-            case .open(let pos, _):
+            case .squint(let pos, _), .open(let pos, _), .worried(let pos, _):
                 return pos == position
             }
         }).first!

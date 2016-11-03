@@ -9,10 +9,10 @@
 import UIKit
 
 private extension Selector {
-    static let didPan = #selector(ViewController.didPan(recognizer:))
+    static let didPan = #selector(CompressingViewController.didPan(recognizer:))
 }
 
-class ViewController: UIViewController {
+class CompressingViewController: UIViewController {
     
     @IBOutlet private weak var dudeView: IBDudeView!
     @IBOutlet private weak var compressionResistanceLabel: UILabel!

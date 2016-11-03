@@ -15,12 +15,6 @@ class IBDudeView: UIView {
 
     // MARK: Public Properties
     
-//    @IBInspectable var colorizeAmount: Float = 0 {
-//        didSet {
-//            self.update(fromColorizeAmount:self.colorizeAmount)
-//        }
-//    }
-    
     var viewModel: IBDudeModel! {
         didSet {
             self.update(fromViewModel: self.viewModel, animated: true)
@@ -42,8 +36,6 @@ class IBDudeView: UIView {
     @IBOutlet private weak var bodyImageView: UIImageView!
     @IBOutlet private weak var mouthImageView: UIImageView!
     
-    @IBOutlet private weak var upHandView: UIImageView!
-    @IBOutlet private weak var downHandView: UIImageView!
     @IBOutlet private weak var leftHandView: UIImageView!
     @IBOutlet private weak var rightHandView: UIImageView!
     
@@ -91,16 +83,8 @@ class IBDudeView: UIView {
         
         self.leftHandView.image = model.handIconLeft
         self.rightHandView.image = model.handIconRight
-        self.upHandView.image = model.handIconUp
-        self.downHandView.image = model.handIconDown
         
         self.leftEyeView.image = model.leftEyeIcon
         self.rightEyeView.image = model.rightEyeIcon
     }
-    
-    private func update(fromColorizeAmount amount: Float) {
-//        let image: UIImage = UIImage(named: "dude_body", in: Bundle(for: type(of:self)), compatibleWith: nil)!
-//        self.bodyImageView.image = image.filter
-    }
-
 }

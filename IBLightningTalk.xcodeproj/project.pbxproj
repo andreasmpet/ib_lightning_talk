@@ -14,8 +14,10 @@
 		E10B12211DCA3BF100C12DCA /* IBDudeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B12201DCA3BF100C12DCA /* IBDudeAnimator.swift */; };
 		E10B12251DCA4AF100C12DCA /* IBDudeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B12241DCA4AF100C12DCA /* IBDudeAnimation.swift */; };
 		E10B12271DCA4B5800C12DCA /* IBCompressionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B12261DCA4B5800C12DCA /* IBCompressionAnimation.swift */; };
+		E10B123A1DCBDD8000C12DCA /* IBHuggingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B12391DCBDD8000C12DCA /* IBHuggingAnimation.swift */; };
+		E10B123C1DCBEA0900C12DCA /* HuggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B123B1DCBEA0900C12DCA /* HuggingViewController.swift */; };
 		E1F098151DC90E0500C05F5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F098141DC90E0500C05F5C /* AppDelegate.swift */; };
-		E1F098171DC90E0500C05F5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F098161DC90E0500C05F5C /* ViewController.swift */; };
+		E1F098171DC90E0500C05F5C /* CompressingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F098161DC90E0500C05F5C /* CompressingViewController.swift */; };
 		E1F0981A1DC90E0500C05F5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F098181DC90E0500C05F5C /* Main.storyboard */; };
 		E1F0981C1DC90E0500C05F5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F0981B1DC90E0500C05F5C /* Assets.xcassets */; };
 		E1F0981F1DC90E0500C05F5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F0981D1DC90E0500C05F5C /* LaunchScreen.storyboard */; };
@@ -47,9 +49,11 @@
 		E10B12201DCA3BF100C12DCA /* IBDudeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDudeAnimator.swift; sourceTree = "<group>"; };
 		E10B12241DCA4AF100C12DCA /* IBDudeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDudeAnimation.swift; sourceTree = "<group>"; };
 		E10B12261DCA4B5800C12DCA /* IBCompressionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBCompressionAnimation.swift; sourceTree = "<group>"; };
+		E10B12391DCBDD8000C12DCA /* IBHuggingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBHuggingAnimation.swift; sourceTree = "<group>"; };
+		E10B123B1DCBEA0900C12DCA /* HuggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuggingViewController.swift; sourceTree = "<group>"; };
 		E1F098111DC90E0500C05F5C /* IBLightningTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBLightningTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F098141DC90E0500C05F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1F098161DC90E0500C05F5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1F098161DC90E0500C05F5C /* CompressingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressingViewController.swift; sourceTree = "<group>"; };
 		E1F098191DC90E0500C05F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1F0981B1DC90E0500C05F5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1F0981E1DC90E0500C05F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		E10B12161DCA3BD300C12DCA /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				E10B12391DCBDD8000C12DCA /* IBHuggingAnimation.swift */,
 				E10B12181DCA3BD300C12DCA /* IBDudeModel.swift */,
 				E10B12241DCA4AF100C12DCA /* IBDudeAnimation.swift */,
 				E10B12261DCA4B5800C12DCA /* IBCompressionAnimation.swift */,
@@ -151,11 +156,12 @@
 				E1F098431DC9132600C05F5C /* Utils */,
 				E10B12141DCA3BD300C12DCA /* Dude */,
 				E1F098141DC90E0500C05F5C /* AppDelegate.swift */,
-				E1F098161DC90E0500C05F5C /* ViewController.swift */,
+				E1F098161DC90E0500C05F5C /* CompressingViewController.swift */,
 				E1F098181DC90E0500C05F5C /* Main.storyboard */,
 				E1F0981B1DC90E0500C05F5C /* Assets.xcassets */,
 				E1F0981D1DC90E0500C05F5C /* LaunchScreen.storyboard */,
 				E1F098201DC90E0500C05F5C /* Info.plist */,
+				E10B123B1DCBEA0900C12DCA /* HuggingViewController.swift */,
 			);
 			path = IBLightningTalk;
 			sourceTree = "<group>";
@@ -297,11 +303,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10B12271DCA4B5800C12DCA /* IBCompressionAnimation.swift in Sources */,
-				E1F098171DC90E0500C05F5C /* ViewController.swift in Sources */,
+				E1F098171DC90E0500C05F5C /* CompressingViewController.swift in Sources */,
+				E10B123C1DCBEA0900C12DCA /* HuggingViewController.swift in Sources */,
 				E1F098541DC916F500C05F5C /* IBColors.swift in Sources */,
 				E1F098151DC90E0500C05F5C /* AppDelegate.swift in Sources */,
 				E10B121E1DCA3BD300C12DCA /* IBDudeView.swift in Sources */,
 				E10B12251DCA4AF100C12DCA /* IBDudeAnimation.swift in Sources */,
+				E10B123A1DCBDD8000C12DCA /* IBHuggingAnimation.swift in Sources */,
 				E10B12211DCA3BF100C12DCA /* IBDudeAnimator.swift in Sources */,
 				E10B121D1DCA3BD300C12DCA /* IBDudeModel.swift in Sources */,
 				E1F0984B1DC9132600C05F5C /* ViewInjector.swift in Sources */,

@@ -12,87 +12,71 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBDudeView" customModule="IBLightningTalk" customModuleProvider="target">
             <connections>
                 <outlet property="bodyImageView" destination="JfW-Rt-2FT" id="9tl-hy-bP3"/>
-                <outlet property="downHandView" destination="sTZ-H2-vZv" id="bwg-aZ-4SB"/>
                 <outlet property="leftEyeView" destination="SM3-q5-vsI" id="eFS-nd-CPT"/>
                 <outlet property="leftHandView" destination="ugx-es-TQN" id="9mZ-j7-gkK"/>
                 <outlet property="mouthImageView" destination="FeR-4N-SZc" id="m7U-Iz-bBW"/>
                 <outlet property="rightEyeView" destination="feJ-xs-0Be" id="iAn-z1-r2L"/>
                 <outlet property="rightHandView" destination="uuF-QE-ur2" id="l2f-lf-lEO"/>
-                <outlet property="upHandView" destination="5QE-Ch-sQG" id="nZR-YX-mwc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="f3c-Rw-xih">
-            <rect key="frame" x="0.0" y="0.0" width="550" height="373"/>
+            <rect key="frame" x="0.0" y="0.0" width="550" height="289"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="body" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-Rt-2FT">
-                    <rect key="frame" x="192" y="104" width="166" height="166"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hand_resisting_up" translatesAutoresizingMaskIntoConstraints="NO" id="5QE-Ch-sQG" userLabel="dude_hands_push_up">
-                    <rect key="frame" x="198" y="0.0" width="154" height="66"/>
+                    <rect key="frame" x="192" y="55" width="166" height="166"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hand_resisting_right" translatesAutoresizingMaskIntoConstraints="NO" id="uuF-QE-ur2" userLabel="dude_hands_push_up">
-                    <rect key="frame" x="484" y="110" width="66" height="154"/>
+                    <rect key="frame" x="484" y="61" width="66" height="154"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hand_resisting_left" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-es-TQN" userLabel="dude_hands_push_up">
-                    <rect key="frame" x="0.0" y="110" width="66" height="154"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="hand_resisting_down" translatesAutoresizingMaskIntoConstraints="NO" id="sTZ-H2-vZv" userLabel="dude_hands_push_up">
-                    <rect key="frame" x="198" y="307" width="154" height="66"/>
+                    <rect key="frame" x="0.0" y="61" width="66" height="154"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye_right_squint" translatesAutoresizingMaskIntoConstraints="NO" id="feJ-xs-0Be">
-                    <rect key="frame" x="272" y="141" width="50" height="50"/>
+                    <rect key="frame" x="272" y="92" width="50" height="50"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye_left_squint" translatesAutoresizingMaskIntoConstraints="NO" id="SM3-q5-vsI">
-                    <rect key="frame" x="219" y="149" width="50" height="50"/>
+                    <rect key="frame" x="219" y="100" width="50" height="50"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hat" translatesAutoresizingMaskIntoConstraints="NO" id="XWf-5K-HOd">
-                    <rect key="frame" x="196" y="49" width="158" height="118"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="hat" translatesAutoresizingMaskIntoConstraints="NO" id="XWf-5K-HOd">
+                    <rect key="frame" x="196" y="0.0" width="158" height="118"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mouth_frown" translatesAutoresizingMaskIntoConstraints="NO" id="FeR-4N-SZc">
-                    <rect key="frame" x="238" y="191" width="80" height="52"/>
+                    <rect key="frame" x="238" y="142" width="80" height="52"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="feJ-xs-0Be" firstAttribute="centerX" secondItem="JfW-Rt-2FT" secondAttribute="centerX" constant="21.5" id="4uE-Le-4e1"/>
                 <constraint firstItem="FeR-4N-SZc" firstAttribute="centerY" secondItem="JfW-Rt-2FT" secondAttribute="centerY" constant="30" id="5wF-bT-bgK"/>
-                <constraint firstItem="uuF-QE-ur2" firstAttribute="centerY" secondItem="f3c-Rw-xih" secondAttribute="centerY" id="6fk-fH-VZr"/>
                 <constraint firstItem="feJ-xs-0Be" firstAttribute="centerY" secondItem="JfW-Rt-2FT" secondAttribute="centerY" constant="-21" id="6oW-Zu-SFr"/>
-                <constraint firstItem="5QE-Ch-sQG" firstAttribute="centerX" secondItem="f3c-Rw-xih" secondAttribute="centerX" id="E23-Wz-MHL"/>
                 <constraint firstItem="JfW-Rt-2FT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ugx-es-TQN" secondAttribute="trailing" constant="-50" id="GWO-L3-MpY"/>
                 <constraint firstItem="SM3-q5-vsI" firstAttribute="centerY" secondItem="JfW-Rt-2FT" secondAttribute="centerY" constant="-13" id="Hcf-If-SDQ"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JfW-Rt-2FT" secondAttribute="bottom" constant="30" id="IVn-VB-Ty4"/>
                 <constraint firstItem="XWf-5K-HOd" firstAttribute="centerX" secondItem="JfW-Rt-2FT" secondAttribute="centerX" id="Nux-jW-lhi"/>
                 <constraint firstItem="FeR-4N-SZc" firstAttribute="centerX" secondItem="JfW-Rt-2FT" secondAttribute="centerX" constant="2.5" id="QBU-dR-RXY"/>
-                <constraint firstItem="JfW-Rt-2FT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5QE-Ch-sQG" secondAttribute="bottom" constant="-24.5" id="Quf-49-aK6"/>
                 <constraint firstItem="SM3-q5-vsI" firstAttribute="centerX" secondItem="JfW-Rt-2FT" secondAttribute="centerX" constant="-31.5" id="SEo-pp-weJ"/>
-                <constraint firstAttribute="bottom" secondItem="sTZ-H2-vZv" secondAttribute="bottom" id="TJC-vI-qDm"/>
                 <constraint firstAttribute="trailing" secondItem="uuF-QE-ur2" secondAttribute="trailing" id="VUU-UA-bKu"/>
-                <constraint firstItem="5QE-Ch-sQG" firstAttribute="top" secondItem="f3c-Rw-xih" secondAttribute="top" id="X1z-4V-1mn"/>
                 <constraint firstItem="uuF-QE-ur2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JfW-Rt-2FT" secondAttribute="trailing" constant="-40" id="ZkX-g7-OhQ"/>
-                <constraint firstItem="sTZ-H2-vZv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JfW-Rt-2FT" secondAttribute="bottom" constant="-60" id="g3M-Tg-vSd"/>
-                <constraint firstItem="sTZ-H2-vZv" firstAttribute="centerX" secondItem="f3c-Rw-xih" secondAttribute="centerX" id="i5k-jb-DR4"/>
+                <constraint firstItem="ugx-es-TQN" firstAttribute="centerY" secondItem="JfW-Rt-2FT" secondAttribute="centerY" id="iS1-NI-YZu"/>
                 <constraint firstItem="JfW-Rt-2FT" firstAttribute="top" secondItem="XWf-5K-HOd" secondAttribute="bottom" constant="-63" id="sow-r9-81g"/>
-                <constraint firstItem="XWf-5K-HOd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="f3c-Rw-xih" secondAttribute="top" id="tqC-5P-aOf"/>
-                <constraint firstItem="JfW-Rt-2FT" firstAttribute="centerY" secondItem="f3c-Rw-xih" secondAttribute="centerY" id="uIs-qm-J9z"/>
+                <constraint firstItem="XWf-5K-HOd" firstAttribute="top" secondItem="f3c-Rw-xih" secondAttribute="top" id="tqC-5P-aOf"/>
                 <constraint firstItem="ugx-es-TQN" firstAttribute="leading" secondItem="f3c-Rw-xih" secondAttribute="leading" id="uLL-GV-2Fx"/>
-                <constraint firstItem="ugx-es-TQN" firstAttribute="centerY" secondItem="f3c-Rw-xih" secondAttribute="centerY" id="xID-9U-O50"/>
+                <constraint firstItem="uuF-QE-ur2" firstAttribute="centerY" secondItem="JfW-Rt-2FT" secondAttribute="centerY" id="vya-S6-uSJ"/>
                 <constraint firstItem="JfW-Rt-2FT" firstAttribute="centerX" secondItem="f3c-Rw-xih" secondAttribute="centerX" id="y68-eJ-KGQ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-280" y="-447.5"/>
+            <point key="canvasLocation" x="-280" y="-489.5"/>
         </view>
     </objects>
     <resources>
         <image name="body" width="166" height="166"/>
         <image name="eye_left_squint" width="50" height="50"/>
         <image name="eye_right_squint" width="50" height="50"/>
-        <image name="hand_resisting_down" width="154" height="66"/>
         <image name="hand_resisting_left" width="66" height="154"/>
         <image name="hand_resisting_right" width="66" height="154"/>
-        <image name="hand_resisting_up" width="154" height="66"/>
         <image name="hat" width="158" height="118"/>
         <image name="mouth_frown" width="80" height="52"/>
     </resources>
